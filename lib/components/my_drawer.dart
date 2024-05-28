@@ -21,12 +21,12 @@ class MyDrawer extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               MyListTile(
-                onPressed: () {},
+                onPressed: () => Navigator.pop(context),
                 icon: const Icon(Icons.home_outlined),
-                text: 'Home',
+                text: 'Shop',
               ),
               MyListTile(
-                onPressed: () {},
+                onPressed: () => Navigator.pushNamed(context, '/cart_page'),
                 icon: const Icon(Icons.shopping_cart_outlined),
                 text: 'Cart',
               ),
@@ -35,7 +35,7 @@ class MyDrawer extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(bottom: 25),
             child: MyListTile(
-              onPressed: () {},
+              onPressed: () => Navigator.pushNamed(context, '/intro_page'),
               icon: const Icon(Icons.logout_outlined),
               text: 'Log Out',
             ),
