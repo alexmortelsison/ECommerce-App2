@@ -14,8 +14,8 @@ class IntroPage extends StatelessWidget {
           Center(
             child: Icon(
               Icons.shopping_bag,
-              color: Theme.of(context).colorScheme.inversePrimary,
               size: 72,
+              color: Theme.of(context).colorScheme.inversePrimary,
             ),
           ),
           const SizedBox(height: 25),
@@ -23,17 +23,15 @@ class IntroPage extends StatelessWidget {
             'Alex Shop',
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 5),
           Text(
-            'Home Of Premium Quality Products',
+            'Home of Premium Quality Products',
             style:
                 TextStyle(color: Theme.of(context).colorScheme.inversePrimary),
           ),
-          const SizedBox(height: 25),
+          const SizedBox(height: 10),
           MyButton(
-              onTap: () {
-                Navigator.pushNamed(context, '/shop_page');
-              },
+              onTap: () => Navigator.pushNamed(context, '/shop_page'),
               child: const Icon(Icons.arrow_forward_outlined))
         ],
       ),
