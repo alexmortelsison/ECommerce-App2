@@ -26,7 +26,7 @@ class ProductTile extends StatelessWidget {
           MaterialButton(
             onPressed: () {
               Navigator.pop(context);
-              context.read<Shop>().shop;
+              context.read<Shop>().addToCart(product);
             },
             child: const Text('Yes'),
           ),
