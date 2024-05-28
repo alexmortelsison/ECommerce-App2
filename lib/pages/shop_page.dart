@@ -15,6 +15,23 @@ class ShopPage extends StatelessWidget {
           style: TextStyle(color: Theme.of(context).colorScheme.inversePrimary),
         ),
       ),
+      body: ListView(
+        children: [
+          Center(
+            child: Text(
+              'Pick from a list of premium quality products',
+              style: TextStyle(
+                  color: Theme.of(context).colorScheme.inversePrimary),
+            ),
+          ),
+          const SizedBox(height: 10),
+          ListView.builder(
+            itemBuilder: (context, index) {
+              return null;
+            },
+          )
+        ],
+      ),
     );
   }
 }

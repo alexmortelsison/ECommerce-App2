@@ -1,3 +1,4 @@
+import 'package:ecommerce_app2/models/shop.dart';
 import 'package:ecommerce_app2/pages/shop_page.dart';
 import 'package:ecommerce_app2/themes/light_mode.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +8,10 @@ import 'pages/intro_page.dart';
 
 void main() {
   runApp(
-    const MyApp(),
+    ChangeNotifierProvider(
+      create: (context) => Shop(),
+      child: const MyApp(),
+    ),
   );
 }
 
