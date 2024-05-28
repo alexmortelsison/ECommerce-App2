@@ -21,6 +21,11 @@ class CartPage extends StatelessWidget {
           ),
           MaterialButton(
             onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Successfully removed from your cart!'),
+                ),
+              );
               Navigator.pop(context);
               context.read<Shop>().removeFromCart(product);
             },

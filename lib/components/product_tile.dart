@@ -25,6 +25,11 @@ class ProductTile extends StatelessWidget {
           ),
           MaterialButton(
             onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Successfully added to your cart!'),
+                ),
+              );
               Navigator.pop(context);
               context.read<Shop>().addToCart(product);
             },
