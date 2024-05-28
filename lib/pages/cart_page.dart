@@ -79,7 +79,7 @@ class CartPage extends StatelessWidget {
                       MyButton(
                         onTap: () => removeFromCart(context, item),
                         child: const Icon(
-                          Icons.add,
+                          Icons.delete,
                         ),
                       ),
                     ],
