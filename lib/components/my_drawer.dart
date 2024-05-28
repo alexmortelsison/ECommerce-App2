@@ -7,6 +7,7 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: Theme.of(context).colorScheme.surface,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -15,29 +16,28 @@ class MyDrawer extends StatelessWidget {
               DrawerHeader(
                 child: Icon(
                   Icons.shopping_bag,
-                  size: 72,
                   color: Theme.of(context).colorScheme.inversePrimary,
+                  size: 72,
                 ),
               ),
-              const SizedBox(height: 10),
               MyListTile(
-                onPressed: () => Navigator.pop(context),
-                icon: const Icon(Icons.home_outlined),
+                icon: Icons.home_outlined,
                 text: 'Shop',
+                onPressed: () {},
               ),
               MyListTile(
-                onPressed: () => Navigator.pushNamed(context, '/cart_page'),
-                icon: const Icon(Icons.shopping_cart_outlined),
+                icon: Icons.shopping_cart_outlined,
                 text: 'Cart',
+                onPressed: () {},
               ),
             ],
           ),
           Padding(
             padding: const EdgeInsets.only(bottom: 25),
             child: MyListTile(
-              onPressed: () => Navigator.pushNamed(context, '/intro_page'),
-              icon: const Icon(Icons.logout_outlined),
+              icon: Icons.logout_outlined,
               text: 'Log Out',
+              onPressed: () {},
             ),
           ),
         ],

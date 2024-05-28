@@ -14,11 +14,11 @@ class IntroPage extends StatelessWidget {
           Center(
             child: Icon(
               Icons.shopping_bag,
-              size: 72,
               color: Theme.of(context).colorScheme.inversePrimary,
+              size: 72,
             ),
           ),
-          const SizedBox(height: 25),
+          const SizedBox(height: 10),
           const Text(
             'Alex Shop',
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
@@ -31,8 +31,9 @@ class IntroPage extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           MyButton(
-              onTap: () => Navigator.pushNamed(context, '/shop_page'),
-              child: const Icon(Icons.arrow_forward_outlined))
+            onTap: () => Navigator.pushNamed(context, '/shop_page'),
+            child: const Icon(Icons.arrow_forward),
+          )
         ],
       ),
     );

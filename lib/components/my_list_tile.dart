@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 
 class MyListTile extends StatelessWidget {
+  final IconData? icon;
   final String text;
   final void Function()? onPressed;
-  final Widget icon;
   const MyListTile({
     super.key,
-    required this.onPressed,
     required this.icon,
     required this.text,
+    required this.onPressed,
   });
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       leading: IconButton(
-        icon: icon,
         onPressed: onPressed,
+        icon: Icon(icon),
       ),
       title: Text(text),
     );
