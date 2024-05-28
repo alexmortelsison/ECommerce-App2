@@ -62,7 +62,12 @@ class CartPage extends StatelessWidget {
                         return Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: ListTile(
-                              leading: Image.asset(item.imagePath),
+                              leading: ClipRRect(
+                                borderRadius: BorderRadius.circular(12),
+                                child: Image.asset(
+                                  item.imagePath,
+                                ),
+                              ),
                               title: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
