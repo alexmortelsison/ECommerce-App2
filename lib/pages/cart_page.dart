@@ -56,35 +56,38 @@ class CartPage extends StatelessWidget {
           itemCount: cart.length,
           itemBuilder: (context, index) {
             Product item = cart[index];
-            return ListTile(
-              leading: ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child: Image.asset(item.imagePath),
-              ),
-              title: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    item.name,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ),
-                  ),
-                  Text(
-                    '\$${item.price.toStringAsFixed(2)}',
-                    style: TextStyle(
-                        color: Theme.of(context).colorScheme.inversePrimary,
-                        fontSize: 14),
-                  )
-                ],
-              ),
-              trailing: MyButton(
-                icon: const Icon(
-                  Icons.delete,
-                  size: 20,
+            return Padding(
+              padding: const EdgeInsets.only(top: 8),
+              child: ListTile(
+                leading: ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.asset(item.imagePath),
                 ),
-                onPressed: () => removeFromCart(context, item),
+                title: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      item.name,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
+                    Text(
+                      '\$${item.price.toStringAsFixed(2)}',
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.inversePrimary,
+                          fontSize: 14),
+                    )
+                  ],
+                ),
+                trailing: MyButton(
+                  icon: const Icon(
+                    Icons.delete,
+                    size: 20,
+                  ),
+                  onPressed: () => removeFromCart(context, item),
+                ),
               ),
             );
           },

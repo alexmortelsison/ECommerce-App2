@@ -64,6 +64,7 @@ class ProductTile extends StatelessWidget {
                   style: const TextStyle(
                       fontWeight: FontWeight.bold, fontSize: 18),
                 ),
+                const SizedBox(height: 10),
                 Text(
                   product.description,
                   style: TextStyle(
