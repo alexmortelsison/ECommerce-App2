@@ -1,3 +1,4 @@
+import 'package:ecommerce_app2/components/my_button.dart';
 import 'package:flutter/material.dart';
 
 class IntroPage extends StatelessWidget {
@@ -28,6 +29,11 @@ class IntroPage extends StatelessWidget {
             style:
                 TextStyle(color: Theme.of(context).colorScheme.inversePrimary),
           ),
+          const SizedBox(height: 10),
+          MyButton(
+            onTap: () => Navigator.pushNamed(context, '/shop_page'),
+            child: const Icon(Icons.arrow_forward_outlined),
+          )
         ],
       ),
     );
