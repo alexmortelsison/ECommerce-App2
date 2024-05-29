@@ -10,11 +10,39 @@ class ShopPage extends StatelessWidget {
       drawer: const MyDrawer(),
       backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.shopping_cart_outlined,
+            ),
+          ),
+        ],
         backgroundColor: Colors.transparent,
         title: Text(
           'My Shop',
           style: TextStyle(color: Theme.of(context).colorScheme.inversePrimary),
         ),
+      ),
+      body: ListView(
+        children: [
+          const SizedBox(height: 10),
+          Center(
+            child: Text(
+              'Pick from a list of premium quality products',
+              style: TextStyle(
+                  color: Theme.of(context).colorScheme.inversePrimary),
+            ),
+          ),
+          SizedBox(
+            height: 750,
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                return null;
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
