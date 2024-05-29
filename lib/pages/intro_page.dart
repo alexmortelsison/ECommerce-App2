@@ -1,4 +1,5 @@
 import 'package:ecommerce_app2/components/my_button.dart';
+import 'package:ecommerce_app2/components/my_drawer.dart';
 import 'package:flutter/material.dart';
 
 class IntroPage extends StatelessWidget {
