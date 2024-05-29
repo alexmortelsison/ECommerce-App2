@@ -25,14 +25,14 @@ class IntroPage extends StatelessWidget {
           ),
           const SizedBox(height: 5),
           Text(
-            'Home of Premium Quality Products',
+            'Home Of Premium Quality Products',
             style:
                 TextStyle(color: Theme.of(context).colorScheme.inversePrimary),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 25),
           MyButton(
-            onTap: () => Navigator.pushNamed(context, '/shop_page'),
-            child: const Icon(Icons.arrow_forward_outlined),
+            icon: const Icon(Icons.arrow_forward),
+            onPressed: () => Navigator.pushNamed(context, '/shop_page'),
           )
         ],
       ),
