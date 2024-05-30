@@ -60,7 +60,7 @@ class CartPage extends StatelessWidget {
               padding: const EdgeInsets.only(top: 8),
               child: ListTile(
                 leading: ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(8),
                   child: Image.asset(item.imagePath),
                 ),
                 title: Column(
